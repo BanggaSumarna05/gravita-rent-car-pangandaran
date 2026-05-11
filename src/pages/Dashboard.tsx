@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { AnimatePresence } from 'motion/react';
 import { cn } from '../lib/utils';
+import logo from '../assets/images/regenerated_image_1778480742380.png';
 import { cars } from '../data';
 
 export default function Dashboard() {
@@ -44,9 +45,9 @@ export default function Dashboard() {
       <div className="lg:hidden bg-zinc-950 p-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-2">
            <img 
-            src="/src/assets/images/regenerated_image_1778480742380.png" 
+            src={logo} 
             alt="Gravita Admin" 
-            className="h-6 w-auto object-contain invert"
+            className="h-8 w-auto object-contain invert"
           />
           <span className="text-white font-bold text-sm tracking-tight">ADMIN</span>
         </div>
@@ -97,12 +98,12 @@ export default function Dashboard() {
       </AnimatePresence>
 
       {/* Sidebar (Desktop) */}
-      <aside className="w-64 bg-zinc-950 text-zinc-400 p-6 flex flex-col hidden lg:flex sticky top-0 h-screen">
+      <aside className="w-full lg:w-72 bg-zinc-950 text-zinc-400 p-6 flex flex-col hidden lg:flex sticky top-0 h-screen">
         <div className="flex items-center gap-3 mb-12 px-2">
           <img 
-            src="/src/assets/images/regenerated_image_1778480742380.png" 
+            src={logo} 
             alt="Gravita Admin" 
-            className="h-8 w-auto object-contain invert"
+            className="h-10 w-auto object-contain invert"
           />
         </div>
 
@@ -133,7 +134,7 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      <main className="flex-1 overflow-y-auto h-full lg:h-screen p-4 md:p-8">
+      <main className="flex-1 overflow-y-auto h-full lg:h-screen p-4 sm:p-6 md:p-8">
         {/* Topbar */}
         <header className="flex flex-col xl:flex-row xl:items-center justify-between gap-6 mb-12">
           <div>
@@ -300,15 +301,15 @@ function ArmadaGrid() {
 function BookingTable() {
   return (
     <div className="bg-white rounded-[2.5rem] border border-zinc-100 shadow-sm overflow-hidden">
-       <div className="p-8 border-b border-zinc-50 flex items-center justify-between">
+       <div className="p-6 md:p-8 border-b border-zinc-50 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-xl font-black font-display text-zinc-900">Riwayat Booking</h2>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3">
              <button className="px-4 py-2 bg-zinc-50 border border-zinc-200 rounded-xl text-xs font-bold text-zinc-600 hover:border-zinc-300">Download Report</button>
              <button className="px-4 py-2 bg-zinc-50 border border-zinc-200 rounded-xl text-xs font-bold text-zinc-600 hover:border-zinc-300">Filter Tanggal</button>
           </div>
        </div>
        <div className="overflow-x-auto">
-          <table className="w-full text-left">
+          <table className="w-full min-w-[640px] text-left">
              <thead>
                 <tr className="bg-zinc-50/50">
                    <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-zinc-400">Pelanggan</th>
@@ -353,7 +354,7 @@ function CustomerList() {
 
       <div className="bg-white rounded-[2.5rem] border border-zinc-100 shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left">
+          <table className="w-full min-w-[560px] text-left">
             <thead>
               <tr className="bg-zinc-50/50">
                 <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-zinc-400">Nama</th>
