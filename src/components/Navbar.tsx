@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Car, Menu, X, Phone, User, LogIn } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import logo from '../assets/images/regenerated_image_1778480742380.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <img 
-            src="/src/assets/images/regenerated_image_1778480742380.png" 
+            src={logo} 
             alt="Gravita Rent Car Logo" 
             className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
           />
@@ -72,8 +73,9 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-zinc-900"
+          className={cn('md:hidden p-2 transition', isScrolled ? 'text-zinc-900' : 'text-white')}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

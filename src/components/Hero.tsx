@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
+    <section ref={containerRef} className="relative min-h-[80vh] md:min-h-[90vh] flex items-center pt-20 md:pt-24 overflow-hidden">
       {/* Background Image / Placeholder */}
       <div className="absolute inset-0 z-0">
         <img
@@ -32,10 +32,10 @@ export default function Hero() {
           loading="eager"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-slate-50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           {/* Trust Badge */}
           <motion.div
@@ -57,7 +57,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <h1 className="hero-title text-5xl md:text-7xl font-black font-display text-white leading-[0.9] tracking-tight">
+          <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl font-black font-display text-white leading-tight tracking-tight max-w-xl">
             <span className="block italic font-serif font-light text-amber-500 mb-2">Eksklusif</span>
             <span className="block">Rental Mobil</span>
             <span className="block">Pangandaran</span>
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="text-zinc-300 text-lg max-w-lg leading-relaxed font-medium"
+            className="text-zinc-300 text-base sm:text-lg max-w-lg leading-relaxed font-medium"
           >
             Nikmati perjalanan berkesan di Pangandaran dengan armada bersih, nyaman, dan pelayanan profesional 24/7.
           </motion.p>
@@ -76,17 +76,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-4"
           >
             <a
               href="#cars"
-              className="group flex items-center gap-2 bg-amber-500 text-zinc-950 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white transition-all shadow-xl shadow-amber-500/20 hover:shadow-white/20"
+              className="group w-full sm:w-auto flex items-center justify-center gap-2 bg-amber-500 text-zinc-950 px-6 sm:px-8 py-4 rounded-2xl font-bold text-lg hover:bg-amber-400 transition-all shadow-xl shadow-amber-500/20"
             >
               Booking Sekarang <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="https://wa.me/6281234567890"
-              className="flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 text-white px-6 sm:px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all"
             >
               <Phone size={20} /> Cek Ketersediaan
             </a>
@@ -96,7 +96,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 pt-6 border-t border-white/10 max-w-md mt-7"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-white/10 max-w-xl mt-7"
           >
             <div>
               <p className="text-amber-500 text-2xl sm:text-3xl font-black">20+</p>

@@ -13,7 +13,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-32 px-6 bg-zinc-950 overflow-hidden relative">
       {/* Decorative */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-amber-500/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-500/5 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -43,7 +43,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="relative min-h-[400px] flex items-center">
+          <div className="relative min-h-[320px] md:min-h-[400px] flex items-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}

@@ -13,10 +13,10 @@ export default function CTA() {
         >
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-linear-to-tr from-amber-500/10 to-transparent blur-2xl rounded-full -translate-x-1/4 translate-y-1/4" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl rounded-full -translate-x-1/4 translate-y-1/4" />
 
           <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-6xl font-black font-display text-white leading-none tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-display text-white leading-tight tracking-tight">
               Siap Jalan-jalan di <span className="text-amber-500">Pangandaran?</span>
             </h2>
             <p className="text-zinc-400 text-lg font-medium">
@@ -26,13 +26,13 @@ export default function CTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#cars"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-amber-500 text-zinc-950 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white transition-all shadow-xl shadow-amber-500/20"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-amber-500 text-zinc-950 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg hover:bg-white transition-all shadow-xl shadow-amber-500/20"
               >
                 Lihat Armada <ArrowRight size={22} />
               </a>
               <a
                 href="https://wa.me/6281234567890"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all"
               >
                 <MessageCircle size={22} /> Chat WhatsApp
               </a>

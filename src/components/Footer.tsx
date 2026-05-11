@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Instagram, Facebook, Mail, Phone, MapPin, Car } from 'lucide-react';
+import logo from '../assets/images/regenerated_image_1778480742380.png';
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <img 
-                src="/src/assets/images/regenerated_image_1778480742380.png" 
+                src={logo} 
                 alt="Gravita Rent Car Logo" 
                 className="h-10 w-auto object-contain invert"
                 loading="lazy"
